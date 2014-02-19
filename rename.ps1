@@ -2,17 +2,6 @@
 
 PS function for renaming a file in a location
 
-If you want to check if the file exists first, replace Remove-Item $old $new with the below
-
-if (Test-Path $old)
-{
-    Rename-Item $old $new
-}
-
-If you want to archive the file, you can also add the below (you will need to update the function to include the archive location parameter)
-
-Move-Item $new $archive
-
 #>
 
 Function RenameFile ($location, $filename, $extension)
